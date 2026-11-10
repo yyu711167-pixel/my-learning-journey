@@ -32,14 +32,14 @@
 <body>
     <div class="card">
         <h1>Hello, I'm Pixel! 🐟</h1>
-        <p>Welcome to my little world.</p>
+        <p id="message">Welcome to my little world.</p>
         <p>I'm learning to build websites!</p>
         <button onclick="sayHello()">Explore My World</button>
     </div>
 <script>
     function sayHello() {
-        alert("Welcome to my little world! 🐟");
-    }
+    document.getElementById("message").innerText = "You found a little surprise! 🐟";
+}
 </script>
 </body>
 </html>
