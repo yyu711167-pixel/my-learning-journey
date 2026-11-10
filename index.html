@@ -34,9 +34,11 @@
         <h1>Hello, I'm Pixel! 🐟</h1>
         <p id="message">Welcome to my little world.</p>
         <p>I'm learning to build websites!</p>
-        <button onclick="sayHello()">Explore My World</button><p id="fishDisplay">Fish collected: 0</p><button onclick="addFish()">
-    Collect a Fish 🐟
-</button>
+        <button onclick="sayHello()">Explore My World</button>
+
+<p id="fishDisplay">Fish collected: 0</p>
+
+<button onclick="addFish()">Collect a Fish 🐟</button>
     </div>
 <script>
     function sayHello() {
@@ -47,7 +49,8 @@
     } else {
         message.innerText = "Welcome to my little world.";
     }
-}let fishCount = 0;
+}
+    let fishCount = 0;
 
 function addFish() {
     fishCount = fishCount + 1;
