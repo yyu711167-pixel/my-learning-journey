@@ -34,7 +34,7 @@
         <h1>Hello, I'm Pixel! 🐟</h1>
         <p id="message">Welcome to my little world.</p>
         <p>I'm learning to build websites!</p>
-        <button onclick="sayHello()">Explore My World</button><button onclick="addFish()">
+        <button onclick="sayHello()">Explore My World</button><p id="fishDisplay">Fish collected: 0</p><button onclick="addFish()">
     Collect a Fish 🐟
 </button>
     </div>
@@ -49,7 +49,11 @@
     }
 }let fishCount = 0;
 
-function addFish() {
+function function addFish() {
+    fishCount = fishCount + 1;
+
+    document.getElementById("fishDisplay").innerText = "Fish collected: " + fishCount;
+} {
     fishCount = fishCount + 1;
     alert("You have " + fishCount + " fish!");
 }
