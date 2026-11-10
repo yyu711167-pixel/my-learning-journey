@@ -38,7 +38,13 @@
     </div>
 <script>
     function sayHello() {
-    document.getElementById("message").innerText = "You found a little surprise! 🐟";
+    let message = document.getElementById("message");
+
+    if (message.innerText === "Welcome to my little world.") {
+        message.innerText = "You found a little surprise! 🐟";
+    } else {
+        message.innerText = "Welcome to my little world.";
+    }
 }
 </script>
 </body>
