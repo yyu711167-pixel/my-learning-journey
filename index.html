@@ -52,6 +52,8 @@
         <p>I'm learning to build websites!</p>
         <button onclick="sayHello()">Explore My World</button>
 
+<p id="oceanStatus"></p>
+
 <p id="fishDisplay">Aquatic Animals Collected: 0</p>
 <div id="fishGarden"></div>
 <button onclick="addFish()">Discover an Animal 🪼</button>
@@ -79,7 +81,19 @@ if (oceanRandom < 0.5) {
 } else {
     oceanMode = "active";
 }
-function addFish() {
+let oceanName;
+
+if (oceanMode === "deep") {
+    oceanName = "🌌 Deep Sea";
+} else if (oceanMode === "calm") {
+    oceanName = "🪼 Calm Waters";
+} else {
+    oceanName = "🐬 Active Current";
+}
+
+document.getElementById("oceanStatus").innerText =
+    "Current Waters: " + oceanName;
+    function addFish() {
     let aquaticAnimals = [
     "🐟", "🐠", "🐡",
     "🐬", "🐳", "🦈",
