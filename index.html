@@ -206,6 +206,29 @@ document.getElementById("fishGarden").innerHTML +=
     speed + 's;">' + selectedFish + '</span>';
 }
 
+function changeOcean(newOcean) {
+    document.body.classList.remove(
+        "deep-sea",
+        "calm-sea",
+        "active-sea"
+    );
+
+    oceanMode = newOcean;
+
+    if (oceanMode === "deep") {
+        document.body.classList.add("deep-sea");
+        oceanName = "🌌 Deep Sea";
+    } else if (oceanMode === "calm") {
+        document.body.classList.add("calm-sea");
+        oceanName = "🪼 Calm Waters";
+    } else {
+        document.body.classList.add("active-sea");
+        oceanName = "🐬 Active Current";
+    }
+
+    document.getElementById("oceanStatus").innerText =
+        "Current Waters: " + oceanName;
+}
 </script>
 </body>
 </html>
