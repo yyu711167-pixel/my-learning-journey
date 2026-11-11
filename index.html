@@ -65,6 +65,30 @@ body.deep-sea h1 {
 body.deep-sea p {
     color: #D6EAF5;
 }
+/* 悠然水域 */
+body.calm-sea {
+    background: linear-gradient(
+        180deg,
+        #EAF4FF,
+        #C8E8F5
+    );
+    min-height: 100vh;
+}
+
+/* 活力洋流 */
+body.active-sea {
+    background: linear-gradient(
+        180deg,
+        #B8F2E6,
+        #67C9C1
+    );
+    min-height: 100vh;
+}
+
+body.active-sea .card {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 30px rgba(20, 130, 125, 0.18);
+}
 </style>
 </head>
 <body>
@@ -104,6 +128,10 @@ if (oceanRandom < 0.5) {
 }
 if (oceanMode === "deep") {
     document.body.classList.add("deep-sea");
+} else if (oceanMode === "calm") {
+    document.body.classList.add("calm-sea");
+} else {
+    document.body.classList.add("active-sea");
 }
  let oceanName;
 
