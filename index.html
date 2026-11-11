@@ -53,10 +53,17 @@
     let fishCount = 0;
 
 function addFish() {
+    let fishes = ["🐟", "🐠", "🐡","🐬","🐳","🐋","🦈"];
+
+    let number = Math.floor(Math.random() * 7);
+
+    let selectedFish = fishes[number];
+
     fishCount = fishCount + 1;
 
-  document.getElementById("fishDisplay").innerText = "Fish collected: " + fishCount;
-document.getElementById("fishGarden").innerHTML += "🐟";
+    document.getElementById("fishDisplay").innerText = "Fish collected: " + fishCount;
+
+    document.getElementById("fishGarden").innerHTML += selectedFish;
 }
 
 </script>
