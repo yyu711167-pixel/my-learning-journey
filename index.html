@@ -89,7 +89,24 @@ body.active-sea .card {
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 8px 30px rgba(20, 130, 125, 0.18);
 }
-</style>
+@keyframes swimming {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.swimming {
+    display: inline-block;
+    animation: swimming 4s ease-in-out infinite;
+}</style>
 </head>
 <body>
     <div class="card">
