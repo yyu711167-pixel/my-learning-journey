@@ -68,7 +68,17 @@
 }
     let fishCount = 0;
 
-function addFish() {
+function let oceanRandom = Math.random();
+
+let oceanMode;
+
+if (oceanRandom < 0.5) {
+    oceanMode = "deep";
+} else if (oceanRandom < 0.85) {
+    oceanMode = "calm";
+} else {
+    oceanMode = "active";
+}addFish() {
     let aquaticAnimals = [
     "🐟", "🐠", "🐡",
     "🐬", "🐳", "🦈",
@@ -85,7 +95,15 @@ let selectedFish = aquaticAnimals[number];
 
     document.getElementById("fishDisplay").innerText = "Aquatic Animals Collected: " + fishCount;
 
-    let speed = Math.random() * 3 + 2;
+    let speed;
+
+if (oceanMode === "deep") {
+    speed = Math.random() * 4 + 6;
+} else if (oceanMode === "calm") {
+    speed = Math.random() * 3 + 3;
+} else {
+    speed = Math.random() * 1.5 + 1.5;
+}
 
 document.getElementById("fishGarden").innerHTML +=
     '<span class="floating" style="animation-duration: ' +
