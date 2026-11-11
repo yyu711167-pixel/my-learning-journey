@@ -139,8 +139,16 @@ body.active-sea .card {
     let collectedAnimals =
     JSON.parse(localStorage.getItem("collectedAnimals")) || [];
     collectedAnimals.forEach(function(animal) {
+    let movement;
+
+    if (["🪼", "🐙"].includes(animal)) {
+        movement = "floating";
+    } else {
+        movement = "swimming";
+    }
+
     document.getElementById("fishGarden").innerHTML +=
-        '<span class="floating">' + animal + '</span>';
+        '<span class="' + movement + '">' + animal + '</span>';
 });
     document.getElementById("fishDisplay").innerText =
     "Aquatic Animals Collected: " + fishCount;
