@@ -53,11 +53,17 @@
     let fishCount = 0;
 
 function addFish() {
-    let fishes = ["🐟", "🐠", "🐡","🐬","🐳","🐋","🦈"];
+    let aquaticAnimals = [
+    "🐟", "🐠", "🐡",
+    "🐬", "🐳", "🦈",
+    "🐙", "🦀", "🦐",
+    "🪼", "🦑", "🐢",
+    "🐸", "🦭", "🐊"
+];
 
-    let number = Math.floor(Math.random() * 7);
+    let number = Math.floor(Math.random() * aquaticAnimals.length);
 
-    let selectedFish = fishes[number];
+let selectedFish = aquaticAnimals[number];
 
     fishCount = fishCount + 1;
 
