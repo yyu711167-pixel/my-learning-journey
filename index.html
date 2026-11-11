@@ -133,7 +133,7 @@ body.active-sea .card {
     let fishCount = 0;
     localStorage.setItem("testAnimal", "🐬");
     let myAnimal = localStorage.getItem("testAnimal");
-    console.log(myAnimal);
+    document.getElementById("message").innerText = myAnimal;
 
 let oceanRandom = Math.random();
 
