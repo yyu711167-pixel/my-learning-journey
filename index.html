@@ -138,6 +138,10 @@ body.active-sea .card {
     let fishCount = Number(localStorage.getItem("fishCount")) || 0;
     let collectedAnimals =
     JSON.parse(localStorage.getItem("collectedAnimals")) || [];
+    collectedAnimals.forEach(function(animal) {
+    document.getElementById("fishGarden").innerHTML +=
+        '<span class="floating">' + animal + '</span>';
+});
     document.getElementById("fishDisplay").innerText =
     "Aquatic Animals Collected: " + fishCount;
     
