@@ -27,6 +27,22 @@
     max-width: 400px;
     margin: 40px auto;
 }
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}.floating {
+    display: inline-block;
+    animation: floating 3s ease-in-out infinite;
+}
 </style>
 </head>
 <body>
@@ -69,7 +85,8 @@ let selectedFish = aquaticAnimals[number];
 
     document.getElementById("fishDisplay").innerText = "Aquatic Animals Collected: " + fishCount;
 
-    document.getElementById("fishGarden").innerHTML += selectedFish;
+    document.getElementById("fishGarden").innerHTML +=
+    '<span class="floating">' + selectedFish + '</span>';
 }
 
 </script>
