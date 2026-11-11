@@ -85,8 +85,11 @@ let selectedFish = aquaticAnimals[number];
 
     document.getElementById("fishDisplay").innerText = "Aquatic Animals Collected: " + fishCount;
 
-    document.getElementById("fishGarden").innerHTML +=
-    '<span class="floating">' + selectedFish + '</span>';
+    let speed = Math.random() * 3 + 2;
+
+document.getElementById("fishGarden").innerHTML +=
+    '<span class="floating" style="animation-duration: ' +
+    speed + 's;">' + selectedFish + '</span>';
 }
 
 </script>
