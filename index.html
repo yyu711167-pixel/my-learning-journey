@@ -68,7 +68,7 @@
 }
     let fishCount = 0;
 
-function let oceanRandom = Math.random();
+let oceanRandom = Math.random();
 
 let oceanMode;
 
@@ -78,7 +78,8 @@ if (oceanRandom < 0.5) {
     oceanMode = "calm";
 } else {
     oceanMode = "active";
-}addFish() {
+}
+function addFish() {
     let aquaticAnimals = [
     "🐟", "🐠", "🐡",
     "🐬", "🐳", "🦈",
