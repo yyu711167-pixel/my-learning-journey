@@ -131,6 +131,7 @@ body.active-sea .card {
     }
 }
     let fishCount = Number(localStorage.getItem("fishCount")) || 0;
+    let collectedAnimals = [];
     document.getElementById("fishDisplay").innerText =
     "Aquatic Animals Collected: " + fishCount;
     
@@ -177,6 +178,7 @@ document.getElementById("oceanStatus").innerText =
     let number = Math.floor(Math.random() * aquaticAnimals.length);
 
 let selectedFish = aquaticAnimals[number];
+collectedAnimals.push(selectedFish);
 let movement;
 
 if (["🪼", "🐙"].includes(selectedFish)) {
