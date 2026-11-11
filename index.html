@@ -36,9 +36,9 @@
         <p>I'm learning to build websites!</p>
         <button onclick="sayHello()">Explore My World</button>
 
-<p id="fishDisplay">Fish collected: 0</p>
+<p id="fishDisplay">Aquatic Animals Collected: 0</p>
 <div id="fishGarden"></div>
-<button onclick="addFish()">Collect a Fish 🐟</button>
+<button onclick="addFish()">Discover an Animal 🪼</button>
     </div>
 <script>
     function sayHello() {
@@ -67,7 +67,7 @@ let selectedFish = aquaticAnimals[number];
 
     fishCount = fishCount + 1;
 
-    document.getElementById("fishDisplay").innerText = "Fish collected: " + fishCount;
+    document.getElementById("fishDisplay").innerText = "Aquatic Animals Collected: " + fishCount;
 
     document.getElementById("fishGarden").innerHTML += selectedFish;
 }
