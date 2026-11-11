@@ -130,7 +130,7 @@ body.active-sea .card {
         message.innerText = "Welcome to my little world.";
     }
 }
-    let fishCount = 0;
+    let fishCount = Number(localStorage.getItem("fishCount")) || 0;
     
     let myAnimal = localStorage.getItem("testAnimal");
     document.getElementById("message").innerText = myAnimal;
@@ -186,7 +186,7 @@ if (["🪼", "🐙"].includes(selectedFish)) {
 }
 
     fishCount = fishCount + 1;
-
+    localStorage.setItem("fishCount", fishCount);
     document.getElementById("fishDisplay").innerText = "Aquatic Animals Collected: " + fishCount;
 
     let speed;
