@@ -180,6 +180,13 @@ if (["🪼", "🐙"].includes(selectedFish)) {
     let number = Math.floor(Math.random() * aquaticAnimals.length);
 
 let selectedFish = aquaticAnimals[number];
+let movement;
+
+if (["🪼", "🐙"].includes(selectedFish)) {
+    movement = "floating";
+} else {
+    movement = "swimming";
+}
 
     fishCount = fishCount + 1;
 
@@ -196,7 +203,7 @@ if (oceanMode === "deep") {
 }
 
 document.getElementById("fishGarden").innerHTML +=
-    '<span class="swimming" style="animation-duration: ' +
+    '<span class="' + movement + '" style="animation-duration: ' +
     speed + 's;">' + selectedFish + '</span>';
 }
 
