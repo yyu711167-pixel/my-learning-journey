@@ -170,11 +170,13 @@ body.active-sea .card {
     collectedAnimals.forEach(function(animal) {
     let movement;
 
-    if (["🪼", "🐙"].includes(animal)) {
-        movement = "floating";
-    } else {
-        movement = "swimming";
-    }
+if (["🪼", "🐙"].includes(animal)) {
+    movement = "floating";
+} else {
+    movement = Math.random() < 0.5
+        ? "swimming"
+        : "swimming-left";
+}
 
     let x = Math.random() * 80;
     let y = Math.random() * 80;
@@ -245,7 +247,9 @@ let movement;
 if (["🪼", "🐙"].includes(selectedFish)) {
     movement = "floating";
 } else {
-    movement = "swimming";
+    movement = Math.random() < 0.5
+        ? "swimming"
+        : "swimming-left";
 }
 
     fishCount = fishCount + 1;
