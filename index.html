@@ -107,7 +107,10 @@ body.active-sea .card {
 .swimming {
     display: inline-block;
     animation: swimming 4s ease-in-out infinite;
-}#fishGarden {
+}
+    #fishGarden {
+    position: relative;
+
     min-height: 220px;
     padding: 20px;
     margin-top: 20px;
@@ -249,6 +252,7 @@ document.getElementById("fishGarden").innerHTML +=
     '" style="left:' + x + '%; top:' + y +
     '%; animation-duration:' + speed + 's;">' +
     selectedFish + '</span>';
+    }
 
 function changeOcean(newOcean) {
     document.body.classList.remove(
