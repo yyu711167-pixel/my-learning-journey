@@ -164,12 +164,17 @@ body.active-sea .card {
     }
 
     let x = Math.random() * 80;
-let y = Math.random() * 80;
+    let y = Math.random() * 80;
+    let speed = Math.random() * 5 + 3;
+    let delay = Math.random() * -8;
 
 document.getElementById("fishGarden").innerHTML +=
     '<span class="' + movement +
-    '" style="left:' + x + '%; top:' + y + '%;">' +
-    animal + '</span>';
+    '" style="left:' + x +
+    '%; top:' + y +
+    '%; animation-duration:' + speed +
+    's; animation-delay:' + delay +
+    's;">' + animal + '</span>';
 });
     document.getElementById("fishDisplay").innerText =
     "Aquatic Animals Collected: " + fishCount;
@@ -246,8 +251,7 @@ if (oceanMode === "deep") {
 
 let x = Math.random() * 80;
 let y = Math.random() * 80;
-        let speed = Math.random() * 5 + 3;
-        let delay = Math.random() * -8;
+let delay = Math.random() * -8;
 
 document.getElementById("fishGarden").innerHTML +=
     '<span class="' + movement +
@@ -255,7 +259,7 @@ document.getElementById("fishGarden").innerHTML +=
     '%; top:' + y +
     '%; animation-duration:' + speed +
     's; animation-delay:' + delay +
-    's;">' + animal + '</span>';
+   's;">' + selectedFish + '</span>';
     }
 
 function changeOcean(newOcean) {
