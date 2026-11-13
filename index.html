@@ -115,6 +115,10 @@ body.active-sea .card {
     border-radius: 25px;
     overflow: hidden;
 }
+#fishGarden .floating,
+#fishGarden .swimming {
+    position: absolute;
+}
 </style>
 </head>
 <body>
@@ -156,8 +160,13 @@ body.active-sea .card {
         movement = "swimming";
     }
 
-    document.getElementById("fishGarden").innerHTML +=
-        '<span class="' + movement + '">' + animal + '</span>';
+    let x = Math.random() * 80;
+let y = Math.random() * 80;
+
+document.getElementById("fishGarden").innerHTML +=
+    '<span class="' + movement +
+    '" style="left:' + x + '%; top:' + y + '%;">' +
+    animal + '</span>';
 });
     document.getElementById("fishDisplay").innerText =
     "Aquatic Animals Collected: " + fishCount;
@@ -232,10 +241,14 @@ if (oceanMode === "deep") {
     speed = Math.random() * 1.5 + 1.5;
 }
 
+let x = Math.random() * 80;
+let y = Math.random() * 80;
+
 document.getElementById("fishGarden").innerHTML +=
-    '<span class="' + movement + '" style="animation-duration: ' +
-    speed + 's;">' + selectedFish + '</span>';
-}
+    '<span class="' + movement +
+    '" style="left:' + x + '%; top:' + y +
+    '%; animation-duration:' + speed + 's;">' +
+    selectedFish + '</span>';
 
 function changeOcean(newOcean) {
     document.body.classList.remove(
